@@ -52291,6 +52291,7 @@ var routes = [{
   component: __webpack_require__(/*! ./components/Profile.vue */ "./resources/assets/js/components/Profile.vue")["default"]
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
+  mode: 'history',
   routes: routes // short for `routes: routes`
 
 });
