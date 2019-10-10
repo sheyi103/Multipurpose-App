@@ -91,10 +91,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="pages/charts/chartjs.html" class="nav-link">
-                      <i class="fas fa-circle nav-icon"></i>
-                      <p>ChartJS</p>
-                    </a>
+                    <router-link to="/users" class="nav-link">
+                      <i class="fas fa-users nav-icon yellow"></i>
+                      <p>Users</p>
+                    </router-link>
                   </li>
                   <li class="nav-item">
                     <a href="pages/charts/flot.html" class="nav-link">
