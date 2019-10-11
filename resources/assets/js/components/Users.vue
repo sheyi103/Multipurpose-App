@@ -60,6 +60,7 @@
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+                <form @submit.prevent="createUser">
                 <div class="modal-body">
                    <div class="form-group">
                       <input v-model="form.name" type="text" name="name"
@@ -93,14 +94,16 @@
                   </div>
                   <div class="form-goup">
                     <input v-model="form.password" type="password" name="password" id="password" class="form-control"
+                     placeholder="Password"
                     :class="{'is-invalid': form.errors.has('password')}">
                     <has-error :form="form" field="password"></has-error>
                   </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Create</button>
+                    <button type="submit" class="btn btn-primary">Create</button>
                 </div>
+                </form>
                 </div>
             </div>
             </div>
@@ -120,6 +123,13 @@
         bio:'',
         photo:''
       })
+    }
+  },
+  methods: {
+    createUser() {
+      // Submit the form via a POST request
+      this.form.post('api/user')
+        // .then(({ data }) => { console.log(data) })
     }
   },
         mounted() {
